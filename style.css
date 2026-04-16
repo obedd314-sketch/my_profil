@@ -1,71 +1,149 @@
-body{
-	color: rgb(10,10,10);
-    background-color: lightgreen;
-	font-family: "Raleway", sans-serif;
-	font-size:16px;
-
-}
-a{
-	text-decoration: none;
-	color:  #6B72E1;
-
-}
-a:hover{
-	color: black;
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-
-}
-h1{
-    font-weight: 900;
-	font-size:30px;
-	color:rgb(20,20,20);
-}
-h2{
-	text-decoration: underline;
-	font-weight: 300;
-	font-size:20px;
-	color:rgb(150,130,230);
-}
-.modif-css{
-	text-align: center;
-	background: white;
-	padding: 10px;
-	margin: 20px;
-	border-radius: 4px;
-	box-shadow: 2px 10px 30px rgba(0,0,0,0.1);
-	
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    background-attachment: fixed; /* Garde le fond fixe au scroll */
+    color: white;
+    overflow-x: hidden;
+    min-height: 100vh;
 }
 
-.link-design{
-	background-color: #6B72E1;
-	color: white;
-	padding: 20px 25px;
-	border-radius: 4px;
-}
-	
-	
-#premier{
-	width: 700px;
-	margin: 0px auto;
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
 }
 
-.img-circle{
-	border-radius: 50px;
+/* Glassmorphism Card Style */
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Support Safari */
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-.list-design{
-	list-style: none;
-	padding-left: 0px
+.card:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
 }
-.list-design li{
-	display: inline;
-	padding: 10px
+
+/* Typography */
+h1 {
+    font-size: 40px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #60a5fa, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
 }
-.list-design i{
-	font-size: 50px;
-	color: #FF5FCF;
+
+h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #a5b4fc;
 }
-.list-design i:hover{
-	color: black;
+
+p {
+    color: #cbd5f5;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    animation: fadeIn 1.2s ease-out;
+}
+
+.hero img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover; /* Évite de déformer l'image */
+    border-radius: 50%;
+    margin: 15px 0;
+    border: 3px solid #6366f1;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 28px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #6366f1, #a855f7);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.6);
+}
+
+/* Skills Tags */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill {
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.1);
+    font-size: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Social Icons */
+.list-social {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+.list-social li {
+    display: inline-block;
+}
+
+.list-social i {
+    font-size: 40px;
+    color: #a78bfa;
+    transition: 0.3s ease;
+}
+
+.list-social i:hover {
+    color: white;
+    transform: scale(1.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Adjustment */
+@media (max-width: 600px) {
+    h1 { font-size: 30px; }
+    .container { margin: 20px auto; }
 }
